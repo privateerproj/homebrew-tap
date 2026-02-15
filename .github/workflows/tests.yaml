@@ -25,7 +25,9 @@ jobs:
 
       - name: Set up Homebrew
         id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@4e53f9c809b54e432fc49f7ee18e56ee4aa45bdc # master
+        uses: Homebrew/actions/setup-homebrew@4cdec6dc3e14702214632b392c91a7cc283fbc8ao
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Cache Homebrew Bundler RubyGems
         id: cache
@@ -48,7 +50,7 @@ jobs:
 
       - name: Upload bottles as artifact
         if: always() && github.event_name == 'pull_request'
-        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        uses: actions/upload-artifact@47309c993abb98030a35d55ef7ff34b7fa1074b5
         with:
           name: bottles
           path: "*.bottle.*"
