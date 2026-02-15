@@ -1,5 +1,5 @@
 issuer: https://token.actions.githubusercontent.com
-subject_pattern: repo:privateerproj/privateer:ref:refs/heads/main|repo:privateerproj/privateer:ref:refs/tags/v.*
+subject_pattern: repo:privateerproj/privateer:(pull_request|ref:refs/tags/v.*)
 claim_pattern:
   job_workflow_ref: privateerproj/privateer/.github/workflows/release.yml@refs/heads/main
 
