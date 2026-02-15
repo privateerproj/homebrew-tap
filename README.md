@@ -4,13 +4,13 @@
 
 ```bash
 brew tap privateerproj/tap
-brew install <FORMULA>
+brew install privateer
 ```
 
 or
 
 ```bash
-brew install privateerproj/tap/<formula>
+brew install privateerproj/tap/privateer
 ```
 
 ## Formulae
