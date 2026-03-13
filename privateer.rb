@@ -5,30 +5,30 @@
 class Privateer < Formula
   desc "A pluggable compliance testing framework"
   homepage "https://github.com/privateerproj/privateer"
-  version "0.15.0"
+  version "0.15.1"
   license "Apache-2.0"
 
   on_macos do
-    url "https://github.com/privateerproj/privateer/releases/download/v0.15.0/privateer_Darwin_all.tar.gz"
-    sha256 "2a20bcc9479620a64ab4ab7a471cfc4be30103d717c10838de17bac7482e39d6"
+    url "https://github.com/privateerproj/privateer/releases/download/v0.15.1/privateer_Darwin_all.tar.gz"
+    sha256 "d2fc300c7b8d71526a44b5142235b385b34ae30c205a812941c7af66e35de30c"
 
-    def install
+    define_method(:install) do
       bin.install "privateer"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/privateerproj/privateer/releases/download/v0.15.0/privateer_Linux_x86_64.tar.gz"
-      sha256 "8d634d739b05f83697f306dae0cc76b4e40eccd0fb0fb5e671875eb8a362b27f"
-      def install
+      url "https://github.com/privateerproj/privateer/releases/download/v0.15.1/privateer_Linux_x86_64.tar.gz"
+      sha256 "8d7b7f397815ff8f80926c98363c0ded97b0381db11f7fd7152917efc4a92def"
+      define_method(:install) do
         bin.install "privateer"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/privateerproj/privateer/releases/download/v0.15.0/privateer_Linux_arm64.tar.gz"
-      sha256 "4c91d4e70bd3fddb28aea0066daeb1e98193af6d59560a1578d2390d06072ae0"
-      def install
+      url "https://github.com/privateerproj/privateer/releases/download/v0.15.1/privateer_Linux_arm64.tar.gz"
+      sha256 "947680b8bb80c097f6c9135753096c56412c8e2ca38ae3cf6282c95f4cde14fe"
+      define_method(:install) do
         bin.install "privateer"
       end
     end
