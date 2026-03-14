@@ -8,6 +8,8 @@ class Pvtr < Formula
   version "0.16.1"
   license "Apache-2.0"
 
+  link_overwrite "bin/privateer"
+
   on_macos do
     url "https://github.com/privateerproj/privateer/releases/download/v0.16.1/privateer_Darwin_all.tar.gz"
     sha256 "363c84891bea0f50fc6fc6af70b0d2a0a1560d32f36104677673026fb425842c"
