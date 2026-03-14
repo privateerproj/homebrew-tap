@@ -15,7 +15,7 @@ brew install privateerproj/tap/pvtr
 
 ## Migrating from privateer
 
-The `privateer` formula has been deprecated. To migrate:
+The `privateer` formula has been disabled. To migrate:
 
 ```bash
 brew uninstall privateer
@@ -27,7 +27,7 @@ brew install privateerproj/tap/pvtr
 | Repository | Formula | Description |
 | ---------- | ------- | ----------- |
 | pvtr | [formula](pvtr.rb) | A pluggable compliance testing framework |
-| privateer (deprecated) | [formula](privateer.rb) | Deprecated, use pvtr instead |
+| privateer (disabled) | [formula](privateer.rb) | Disabled, use pvtr instead |
 
 ## Documentation
 
