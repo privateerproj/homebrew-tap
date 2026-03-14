@@ -4,35 +4,18 @@
 class Privateer < Formula
   desc "Deprecated: use 'pvtr' instead"
   homepage "https://github.com/privateerproj/privateer"
+  url "https://github.com/privateerproj/privateer/releases/download/v0.15.1/privateer_Linux_x86_64.tar.gz"
+  sha256 "8d7b7f397815ff8f80926c98363c0ded97b0381db11f7fd7152917efc4a92def"
   version "0.15.1"
   license "Apache-2.0"
 
-  deprecate! date: "2026-03-14", because: "has been renamed to pvtr. Run: brew uninstall privateer && brew install privateerproj/tap/pvtr"
+  deprecate! date: "2026-03-14",
+             because: "it has been renamed to pvtr. " \
+                      "Run: brew uninstall privateer && " \
+                      "brew install privateerproj/tap/pvtr"
 
-  on_macos do
-    url "https://github.com/privateerproj/privateer/releases/download/v0.15.1/privateer_Darwin_all.tar.gz"
-    sha256 "d2fc300c7b8d71526a44b5142235b385b34ae30c205a812941c7af66e35de30c"
-
-    define_method(:install) do
-      bin.install "privateer"
-    end
-  end
-
-  on_linux do
-    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/privateerproj/privateer/releases/download/v0.15.1/privateer_Linux_x86_64.tar.gz"
-      sha256 "8d7b7f397815ff8f80926c98363c0ded97b0381db11f7fd7152917efc4a92def"
-      define_method(:install) do
-        bin.install "privateer"
-      end
-    end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/privateerproj/privateer/releases/download/v0.15.1/privateer_Linux_arm64.tar.gz"
-      sha256 "947680b8bb80c097f6c9135753096c56412c8e2ca38ae3cf6282c95f4cde14fe"
-      define_method(:install) do
-        bin.install "privateer"
-      end
-    end
+  def install
+    bin.install "privateer"
   end
 
   test do
