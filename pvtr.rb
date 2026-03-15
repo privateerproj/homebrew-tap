@@ -4,7 +4,6 @@
 class Pvtr < Formula
   desc "Pluggable compliance testing framework"
   homepage "https://github.com/privateerproj/privateer"
-  version "0.16.1"
   license "Apache-2.0"
 
   if OS.mac?
