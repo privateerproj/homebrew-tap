@@ -7,14 +7,14 @@ class Pvtr < Formula
   license "Apache-2.0"
 
   if OS.mac?
-    url "https://github.com/privateerproj/privateer/releases/download/v0.18.1/privateer_Darwin_all.tar.gz"
-    sha256 "86b55fd305d86c0572f40a111530c910bab6c3d140c4b83ef94c0a9dffdfef01"
+    url "https://github.com/privateerproj/privateer/releases/download/v0.19.0/privateer_Darwin_all.tar.gz"
+    sha256 "78303d7eef4bd9732d38ed9131403abb9866ff3d073e68922013617a88c69fae"
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/privateerproj/privateer/releases/download/v0.18.1/privateer_Linux_x86_64.tar.gz"
-    sha256 "2137e9d9b09a6029d5bf534fe1f5e365e353126b91b9d6f6941e87c387b69a11"
+    url "https://github.com/privateerproj/privateer/releases/download/v0.19.0/privateer_Linux_x86_64.tar.gz"
+    sha256 "452b32f6e3dc0482f11a25bae9964485bd32ca94edeb08d3582b0c6675c1737b"
   elsif OS.linux? && Hardware::CPU.arm?
-    url "https://github.com/privateerproj/privateer/releases/download/v0.18.1/privateer_Linux_arm64.tar.gz"
-    sha256 "f8e7b5af11b19b457146f139a5a8db7e7ffbca9ccf75b67218c95c3ba8ba5ec4"
+    url "https://github.com/privateerproj/privateer/releases/download/v0.19.0/privateer_Linux_arm64.tar.gz"
+    sha256 "a3470c66cb616d132adf0b2cbcfc373594d1f9058f62158bfa37d12933278e44"
   end
 
   link_overwrite "bin/privateer"
