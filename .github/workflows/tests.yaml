@@ -41,6 +41,11 @@ jobs:
 
       - run: brew test-bot --only-cleanup-before
 
+      # Homebrew 5.1.15+ enforces tap trust; brew doctor (run by --only-setup)
+      # exits non-zero for untrusted third-party taps. Trust this tap's own
+      # formulae in CI so the check passes. Becomes mandatory in Homebrew 6.0.0.
+      - run: brew trust privateerproj/tap
+
       - run: brew test-bot --only-setup
 
       - run: brew test-bot --only-formulae
