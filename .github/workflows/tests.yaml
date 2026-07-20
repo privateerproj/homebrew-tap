@@ -43,8 +43,8 @@ jobs:
 
       # Homebrew 5.1.15+ enforces tap trust; brew doctor (run by --only-setup)
       # exits non-zero for untrusted third-party taps. Trust this tap's own
-      # formulae in CI so the check passes. Becomes mandatory in Homebrew 6.0.0.
-      - run: brew trust privateerproj/tap
+      # formula in CI so the check passes. Becomes mandatory in Homebrew 6.0.0.
+      - run: brew trust --formula privateerproj/tap/pvtr
 
       - run: brew test-bot --only-setup
 
